@@ -20,14 +20,11 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Set up Kotlin
-      uses: fwcd/setup-kotlin@v1
-
     - name: Build with Maven
       run: mvn clean package
 
     - name: Upload Compiled JAR
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v3
       with:
         name: HyenaRTP.jar
         path: target/HyenaRTP-1.0.0-shaded.jar
