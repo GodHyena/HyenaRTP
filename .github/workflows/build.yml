@@ -24,7 +24,7 @@ jobs:
       run: mvn clean package
 
     - name: Upload Compiled JAR
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: HyenaRTP.jar
         path: target/HyenaRTP-1.0.0-shaded.jar
