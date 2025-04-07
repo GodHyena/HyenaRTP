@@ -1,16 +1,28 @@
+package me.hyena.hyenartp.utils
+
+import org.bukkit.entity.Player
+import org.bukkit.plugin.java.JavaPlugin
+import org.bukkit.scheduler.BukkitRunnable
+
 object CountdownUtil {
-    fun startCountdown(player: Player, seconds: Int, onComplete: () -> Unit) {
+    fun startCountdown(plugin: JavaPlugin, player: Player, seconds: Int, onFinish: () -> Unit) {
         object : BukkitRunnable() {
-            var count = seconds
+            var timeLeft = seconds
             override fun run() {
-                if (count <= 0) {
+                if (timeLeft <= 0) {
                     cancel()
-                    onComplete()
+                    onFinish()
                     return
                 }
-                player.sendTitle("Teleporting in $count...", "", 0, 20, 0)
-                count--
+
+                player.sendTitle("§eTeleporting in...", "§a$timeLeft", 0, 20, 10)
+                timeLeft--
             }
-        }.runTaskTimer(pluginInstance, 0L, 20L)
+        }.runTaskTimer(plugin, 0L, 20L)
+    }
+
+    fun showTeleportSuccess(player: Player) {
+        val loc = player.location
+        player.sendTitle("§aTeleported!", "§7X:${loc.blockX} Y:${loc.blockY} Z:${loc.blockZ}", 10, 40, 10)
     }
 }
