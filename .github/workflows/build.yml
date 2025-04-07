@@ -27,4 +27,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: HyenaRTP.jar
-        path: target/HyenaRTP-1.0.0-shaded.jar
+        path: target/HyenaRTP-1.1.1.jar
