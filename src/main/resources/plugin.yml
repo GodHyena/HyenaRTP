@@ -1,6 +1,6 @@
 name: HyenaRTP
 main: me.hyena.hyenartp.HyenaRTP
-version: 1.0.0
+version: 1.1.1
 api-version: 1.20
 description: Random teleport plugin with per-rank cooldown, safe locations, and world access control.
 author: Hyena
