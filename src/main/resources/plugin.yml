@@ -1,0 +1,17 @@
+name: HyenaRTP
+version: 1.0.0
+main: me.hyena.hyenartp.HyenaRTP
+api-version: 1.20
+commands:
+  rtp:
+    description: Random teleport command
+    usage: /rtp <world> or /rtp <player> <world>
+permissions:
+  hyenartp.rank.default:
+    default: true
+  hyenartp.rank.vip:
+    default: false
+  hyenartp.rank.mvp:
+    default: false
+  hyenartp.rank.elite:
+    default: false
