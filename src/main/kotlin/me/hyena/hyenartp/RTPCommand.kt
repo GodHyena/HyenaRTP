@@ -29,7 +29,7 @@ class RTPCommand : CommandExecutor {
         "mvp" to listOf("world", "world_nether", "world_the_end"),
         "elite" to listOf("world", "world_nether", "world_the_end")
     )
-private fun getRank(player: Player): String {
+    private fun getRank(player: Player): String {
         return when {
             player.hasPermission("hyenartp.rank.elite") -> "elite"
             player.hasPermission("hyenartp.rank.mvp") -> "mvp"
