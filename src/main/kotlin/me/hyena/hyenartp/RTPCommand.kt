@@ -104,7 +104,7 @@ class RTPCommand : CommandExecutor {
         sender.sendMessage("§eUsage: /rtp <world> or /rtp <player> <world>")
         return true
     }
-private fun teleportWithEffects(player: Player, world: World, sender: CommandSender?) {
+    private fun teleportWithEffects(player: Player, world: World, sender: CommandSender?) {
         val border = world.worldBorder
         val uuid = player.uniqueId
         val prevLocs = usedLocations.getOrPut(uuid) { mutableListOf() }
